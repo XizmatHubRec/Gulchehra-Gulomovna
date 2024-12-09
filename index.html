@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektronika Xizmatlari</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #3e5151, #decba4);
+            color: #333;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff9800;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://i.ytimg.com/vi/X-7bRrZs5Fc/maxresdefault.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+        .hero:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: #ff9800;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #e68900;
+        }
+
+        /* Services Section */
+        .services {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #3e5151;
+        }
+        .services-card {
+            background: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .services-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .services-card i {
+            font-size: 3rem;
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #333;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #444;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #e68900;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Section */
+        .about {
+            background: #f9f9f9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #3e5151;
+        }
+        .about .author {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .about .author img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+            animation: bounceIn 1s ease-in-out;
+        }
+        .about .author .info {
+            max-width: 600px;
+            text-align: left;
+        }
+        .about .author .info p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elektronika Xizmatlari</h1>
+            <p>Elektronika va elektr jihozlarini sotish va o‘rnatish bo‘yicha xizmatlar</p>
+            <a href="#services" class="btn btn-primary">Xizmatlarimiz</a>
+        </div>
+    </section>
+     <!-- About Section -->
+     <section id="about" class="about">
+        <div class="container">
+            <h2>Men haqimda</h2>
+            <div class="author" id="author-info">
+                <img src="avatar.jpg" alt="Muallif rasmi" id="author-img">
+                <div class="info">
+                    <p><strong>Xo'jaxmedova Gulchehra Gulomovna:</strong> </p>
+                    <p>Men hemisda 37 -nomerda turaman. Xo'jaxmedova Gulchehra Gulomovna Qaraqolpog'iston respublikasi Ellikqal'a tumani Qilchinoq OFYda. Oilaliman, 2 nafar farzandim bor. Turmush o'rtog'im bilan baxtli saodatli hayot kechirmoqdamiz. Farzandlarim Nurbek, Oydinoyning mehribon onasiman. Maktabda kutubxonachi bo'lib ishlayman. Turmush o'rtog'im Matematika o'qituvchisi bo'lib ishlaydi. Oddiy oilada baxtli hayot kechiryapmiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // JavaScript for dynamic animation and interactivity
+        document.addEventListener("DOMContentLoaded", function() {
+            const authorSection = document.getElementById("author-info");
+            const authorImage = document.getElementById("author-img");
+
+            // Animation to make the "about" section fade in
+            setTimeout(() => {
+                authorSection.style.opacity = 1;
+                authorSection.style.animation = "fadeIn 2s ease-in-out";
+            }, 500);  // Delay for smooth qilinish
+
+            // Hover effect rasm uchun
+            authorImage.addEventListener("mouseenter", function() {
+                authorImage.style.transform = "scale(1.1)";
+            });
+
+            authorImage.addEventListener("mouseleave", function() {
+                authorImage.style.transform = "scale(1)";
+            });
+        });
+    </script>
+    
+    
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Xizmatlarimiz</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <i class="fas fa-tools"></i>
+                        <h4>Jihozlarni o‘rnatish</h4>
+                        <p>Elektr jihozlarini professional o‘rnatish xizmatlari.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h4>Jihozlarni sotish</h4>
+                        <p>Eng so‘nggi texnologiyalarga ega jihozlarni sotish.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <i class="fas fa-headset"></i>
+                        <h4>Texnik qo‘llab-quvvatlash</h4>
+                        <p>24/7 texnik yordam va maslahat xizmatlari.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Bog‘lanish</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Ism">
+            <input type="email" placeholder="Email">
+            <textarea rows="4" placeholder="Xabaringizni yozing"></textarea>
+            <button type="submit">Yuborish</button>
+        </form>
+    </section>
+</body>
+</html>
